@@ -1,0 +1,8 @@
+services:
+  dockertest:
+    image: ${DOCKER_REGISTRY-}dockertest
+    build:
+      context: .
+      dockerfile: DockerTest/Dockerfile
+    deploy:
+      replicas: 3
